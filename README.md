@@ -1,5 +1,5 @@
 # spring-boot2-try
-# study
+
 Spring-Bootで効率的なアプリケーション開発
 
 ## やりたいこと
