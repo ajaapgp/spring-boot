@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>TOP画面</title>
+</head>
+<body>
+    <h1>TOP画面</h1>
+    
+    <ul>
+        <li th:each="goods : ${goodsList}">
+            <span th:text="${goods.goodsName}">ペン</span>:<span th:text="${goods.price}">100</span>円
+        </li>
+    </ul>
+
+    <a th:href="@{/regist/index}" href="../regist/regist.html">登録画面</a>
+</body>
+</html>
