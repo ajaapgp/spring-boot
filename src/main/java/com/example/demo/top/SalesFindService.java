@@ -4,8 +4,8 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.example.demo.entity.Goods;
-import com.example.demo.entity.GoodsMapper;
+import com.example.demo.entity.Sales;
+import com.example.demo.entity.SalesMapper;
 
 import lombok.RequiredArgsConstructor;
 
@@ -14,17 +14,17 @@ import lombok.RequiredArgsConstructor;
  */
 @Service
 @RequiredArgsConstructor
-public class GoodsFindService {
+public class SalesFindService {
     
     /** goodsマッパー */
-    private final GoodsMapper goodsMapper;
+    private final SalesMapper salesMapper;
 
     /**
      * goodsを全件取得する
-     * @return goodsリスト
+     * @return salesリスト
      */
-    public List<Goods> findGoodss() {
+    public List<Sales> findSaless() {
         // 全件取得する
-        return goodsMapper.select();
+        return salesMapper.select();
     }
 }

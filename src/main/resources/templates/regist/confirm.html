@@ -8,15 +8,15 @@
     <h1>goods登録確認画面</h1>
     <a th:href="@{/}" href="../top/index.html">TOP画面へ</a>
 
-    <form method="POST" th:action="@{regist}" action="./complete.html" th:object="${goodsForm}">
+    <form method="POST" th:action="@{regist}" action="./complete.html" th:object="${salesForm}">
         <div>
             <p>ID</p>
             <div th:text="*{id}">3</div>
         </div>
 
         <div>
-            <p>GOODS NAME</p>
-            <div th:text="*{goodsName}">えんぴつ</div>
+            <p>SALES NAME</p>
+            <div th:text="*{salesName}">えんぴつ</div>
         </div>
 
         <div>
@@ -25,7 +25,7 @@
         </div>
 
         <input type="hidden" th:field="*{id}" />
-        <input type="hidden" th:field="*{goodsName}" />
+        <input type="hidden" th:field="*{salesName}" />
         <input type="hidden" th:field="*{price}" />
 
         <button type="submit">登録</button>

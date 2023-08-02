@@ -13,8 +13,8 @@ import lombok.Data;
  * 各フィールドにアノテーションを付与して、単項目チェックを行う
  */
 @Data
-public class GoodsForm {
+public class SalesForm {
     private Integer id;
-    private String goodsName;
+    private String salesName;
     private Integer price;
 }

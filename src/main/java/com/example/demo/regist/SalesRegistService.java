@@ -2,8 +2,8 @@ package com.example.demo.regist;
 
 import org.springframework.stereotype.Service;
 
-import com.example.demo.entity.Goods;
-import com.example.demo.entity.GoodsMapper;
+import com.example.demo.entity.Sales;
+import com.example.demo.entity.SalesMapper;
 
 import lombok.RequiredArgsConstructor;
 
@@ -17,21 +17,21 @@ import lombok.RequiredArgsConstructor;
  */
 @Service
 @RequiredArgsConstructor
-public class GoodsRegistService {
+public class SalesRegistService {
     
-    /** goodsマッパー */
-    private final GoodsMapper goodsMapper;
+    /** salesマッパー */
+    private final SalesMapper salesMapper;
 
     /**
-     * goodsを登録する
-     * @param goods Goods
+     * salesを登録する
+     * @param sales Sales
      */
-    public void registGoods(Goods goods) {
+    public void registSales(Sales sales) {
         
         // Tips
-        // Goodsクラスにsetter,getterは実装していないが「goods.getGoodsName()」のビルドができる。
+        // Goodsクラスにsetter,getterは実装していないが「sales.getSalesName()」のビルドができる。
         // Lombokの機能で「@Data」アノテーションをGoodsクラスに付けることでsetter,getterがclassファイルとして生成されている。
-        System.out.println(goods.getGoodsName());
+        System.out.println(sales.getSalesName());
 
 
         // 未実装
@@ -39,6 +39,6 @@ public class GoodsRegistService {
 
 
         // DBへ登録する
-        goodsMapper.regist(goods);
+        salesMapper.regist(sales);
     }
 }
